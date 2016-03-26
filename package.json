@@ -1,6 +1,6 @@
 {
   "name": "api-cache-cluster",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "An ultra-simplified API/JSON response caching middleware for Express/Node using plain-english durations, supporting clustering",
   "main": "./lib/apicache.js",
   "repository": {
