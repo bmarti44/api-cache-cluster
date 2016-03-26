@@ -1,11 +1,7 @@
-WARNING - This is currently completely broken, I should have it sussed out soon
-===============================================================================
+api-cache-cluster
+=================
 
-
-apicache
-========
-
-An ultra-simplified API/JSON response caching middleware for Express/Node using plain-english durations.
+An ultra-simplified API/JSON response caching middleware for Express/Restify backed by cluster cache.
 
 ## Why?
 

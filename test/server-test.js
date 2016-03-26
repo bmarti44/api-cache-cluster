@@ -2,7 +2,7 @@
 
 var cluster = require('cluster'),
   os = require('os'),
-  apicachecluster = require('../src/index.js')(cluster, {stdTTL: 5, checkperiod: 5}),
+  apicachecluster = require('../src/index.js')(cluster, {stdTTL: 5, checkperiod: 5, debug: true}),
   restify = require('restify');
 
 class ApiCacheClusterTest {

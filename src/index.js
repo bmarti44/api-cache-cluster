@@ -2,6 +2,7 @@
 
 var url = require('url'),
   clusterCache,
+  config,
   crypto = require('crypto');
 
 function ApiCacheCluster() {
@@ -41,7 +42,9 @@ function ApiCacheCluster() {
 
         if (!cachedResult.value[key]) {
           clusterCache.set(key, responseObj).then((result) => {
-            console.log(`Successfully set ${req.url} in cache!`);
+            if (config.debug) {
+              console.log(`Successfully set ${req.url} in cache!`);
+            }
           });
         }
         return res.realSend(responseObj.body);
@@ -54,6 +57,7 @@ function ApiCacheCluster() {
 }
 
 module.exports = (cluster, config) => {
+  config = config;
   clusterCache = require('cluster-node-cache')(cluster, config);
   return new ApiCacheCluster();
 };
