@@ -1,11 +1,11 @@
 {
   "name": "api-cache-cluster",
-  "version": "0.0.13",
-  "description": "An ultra-simplified API/JSON response caching middleware for Express/Node using plain-english durations.",
+  "version": "0.1.13",
+  "description": "An ultra-simplified API/JSON response caching middleware for Express/Node using plain-english durations, supporting clustering",
   "main": "./lib/apicache.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kwhitley/apicache.git"
+    "url": "https://github.com/bmarti44/apicache"
   },
   "keywords": [
     "cache",
@@ -16,9 +16,10 @@
     "duration",
     "middleware",
     "simple",
-    "memory"
+    "memory",
+    "cluster"
   ],
-  "author": "K. R. Whitley <contact@krwhitley.com> (http://krwhitley.com/)",
+  "author": "Brian Martin & K. R. Whitley <contact@krwhitley.com> (http://krwhitley.com/)",
   "licenses": [
     {
       "type": "MIT",
@@ -41,7 +42,6 @@
   "dependencies": {
     "cluster-node-cache": "^0.1.0",
     "inflection": "~1.2.6",
-    "lodash": "~1.3.1",
-    "memory-cache": "0.0.5"
+    "lodash": "~1.3.1"
   }
 }
