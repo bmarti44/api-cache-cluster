@@ -2,7 +2,7 @@
 
 var cluster = require('cluster'),
   os = require('os'),
-  apicachecluster = require('../src/index.js')(cluster),
+  apicachecluster = require('../src/index.js')(cluster, {stdTTL: 5, checkperiod: 5}),
   restify = require('restify');
 
 class ApiCacheClusterTest {
@@ -21,6 +21,7 @@ class ApiCacheClusterTest {
     this.app.use(restify.bodyParser());
 
     this.app.get('/', (req, res, next) => {
+      console.log('This request was not cached!');
       res.send('Testing cache');
       next();
     });
